@@ -116,6 +116,14 @@ for datatyp in ['train', 'valid', 'test']:
             remove_tst_ex+=[i[:-1]]
 
     # Save the datasets
+
+    #np.set_printoptions(threshold=np.nan)
+    #print inpl
+    #print inpr
+    #print inpo
+
+    print inpl[117].sum()
+
     if 'data' not in os.listdir('../'):
         os.mkdir('../data')
     f = open('../data/FB15k-%s-lhs.pkl' % datatyp, 'w')

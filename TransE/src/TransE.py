@@ -188,8 +188,7 @@ for epoch_count in xrange(1, state.totepochs + 1):
         tmpnl = trainln[:, i * batchsize:(i + 1) * batchsize]
         tmpnr = trainrn[:, i * batchsize:(i + 1) * batchsize]
         # training iteration
-        outtmp = trainfunc(state.lremb, state.lrparam,
-                tmpl, tmpr, tmpo, tmpnl, tmpnr)
+        outtmp = trainfunc(state.lremb, state.lrparam, tmpl, tmpr, tmpo, tmpnl, tmpnr)
         out += [outtmp[0] / float(batchsize)]
         outb += [outtmp[1]]
 
